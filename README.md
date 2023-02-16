@@ -2,4 +2,4 @@
 
 Tool used: Selenium 3.141.59 + Java + TestNG 7.4 + Chrome Web Driver(path as specified in the System.setProperty() in code)
 Imported required Selenium and TestNG Packages 
-Path of java code : Movies/Demo/src
+Path of java code : Movies/src/Demo
