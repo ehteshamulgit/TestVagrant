@@ -9,6 +9,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -46,10 +47,16 @@ WebElement e3 = driver.findElement(By.xpath("//div[@data-testid='title-details-s
 String release_Date = e2.getText();
 String country = e3.getText();
 
+String expectedDateIMDB = "December 17, 2021 (United States)";
+String expectedCountryIMDB = "India";
+
+Assert.assertEquals(release_Date, expectedDateIMDB);
+Assert.assertEquals(country, expectedCountryIMDB);
+
 System.out.println("Result from IMDB");
 
 System.out.println(release_Date);
-        System.out.println(country);
+System.out.println(country);
 
 
        
@@ -70,10 +77,20 @@ WebElement e6 = driver.findElement(By.xpath("//table[@class='infobox vevent']/tb
 String release_DateWiki = e5.getText();
 String countryWiki = e6.getText();
 
+
+String expectedDateWiki = "17 December 2021";
+String expectedCountryWiki = "India";
+
+Assert.assertEquals(release_DateWiki, expectedDateWiki);
+Assert.assertEquals(countryWiki, expectedCountryWiki);
+
 System.out.println("Result from WIKIPEDIA");
 
 System.out.println(release_DateWiki);
 System.out.println(countryWiki);
+
+
+
 
 
   }
